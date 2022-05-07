@@ -17,13 +17,11 @@ def coordinatesToVector(xval,yval):
     tuple = standardizedCoOrds(xval,yval)
     (x, y) = tuple
     magnitudeOfVector = math.sqrt(x**2 + y**2)
-    print("magnitude:", magnitudeOfVector) 
     if magnitudeOfVector <= deadspace:
         magnitudeOfVector = 0
     if magnitudeOfVector >= maxval:
         magnitudeOfVector = 1
     directionOfVector = abs(math.degrees(math.atan(y/x)))
-    print("direction:", directionOfVector)
     return (magnitudeOfVector, directionOfVector)
 
 #converts coordinates into a 3 figure bearing with magnitude
